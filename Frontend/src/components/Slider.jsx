@@ -5,7 +5,7 @@ const Container = styled.div`
     width: 100%;
     height: 100vh;
     display: flex;
-    background-color: coral;
+    overflow: hidden;
     position: relative;
 `
 
@@ -53,6 +53,24 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 
+const Title = styled.h1`
+  font-size: 70px;
+`;
+
+const Desc = styled.p`
+  margin: 50px 0px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+`;
+
 
 const Slider = () => {
   return (
@@ -63,10 +81,22 @@ const Slider = () => {
         <Wrapper>
             <Slide>
                 <ImgContainer>
-                    <Image src="http://tinyurl.com/42cs7vkt"/>
+                    <Image src="http://tinyurl.com/5n88brmp"/>
                 </ImgContainer>
                 <InfoContainer>
-
+                    <Title>Summer Sale!</Title>
+                    <Desc>Don't miss out!</Desc>
+                    <Button>SHOP NOW</Button>
+                </InfoContainer>
+            </Slide>
+            <Slide>
+                <ImgContainer>
+                    <Image src="http://tinyurl.com/5n88brmp"/>
+                </ImgContainer>
+                <InfoContainer>
+                    <Title>Winter Sale!</Title>
+                    <Desc>Don't miss out!</Desc>
+                    <Button>SHOP NOW</Button>
                 </InfoContainer>
             </Slide>
         </Wrapper>
