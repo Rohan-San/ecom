@@ -14,7 +14,7 @@ const Container = styled.div`
 const Announcement = () => {
   return (
     <Container>
-        Super Deal!
+        Flash Offer! Flat 50% off on all purchases above Rs. 500!
     </Container>
   )
 }
