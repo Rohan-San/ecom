@@ -7,7 +7,7 @@ const Container = styled.div`
     display: flex;
     overflow: hidden;
     position: relative;
-`
+`;
 
 const Arrow = styled.div`
     width: 50px;
@@ -20,16 +20,18 @@ const Arrow = styled.div`
     position: absolute;
     top: 0;
     bottom: 0;
+    left: ${(props) => props.direction === "left" && "10px"};
+    right: ${(props) => props.direction === "right" && "10px"};
     margin: auto;
-    left: ${props => props.direction === "left" && "10px"};
-    right: ${props => props.direction === "right" && "10px"};
     cursor: pointer;
     opacity: 0.6;
-`
+    z-index: 2;
+`;
 
 const Wrapper = styled.div`
     height: 100%;
-`
+    display: flex;
+`;
 
 const Slide = styled.div`
   width: 100vw;
@@ -45,7 +47,8 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 90%;
+  margin-left: 100px;
 `;
 
 const InfoContainer = styled.div`
@@ -79,7 +82,7 @@ const Slider = () => {
             <KeyboardArrowLeft/>
         </Arrow>
         <Wrapper>
-            <Slide>
+            <Slide bg="lightblue">
                 <ImgContainer>
                     <Image src="http://tinyurl.com/5n88brmp"/>
                 </ImgContainer>
